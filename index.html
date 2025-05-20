@@ -1,9 +1,85 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Under Construction!</title>
-  </head>
-  <body>
-    <p>Under Construction...</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanat Kanwal's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <div class="hero-header" data-aos="fade-in">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-s"></i>
+                    <div class="logo-text">Sanat Kanwal</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic" data-aos="zoom-in">
+                    <img src="images/pfp.jpg" alt="profile pic">
+                </div>
+                <div class="hero-text" data-aos="fade-up">
+                    <h5>Hi I am a <span class="input">Frontend Developer</span></h5>
+                    <h1>Sanat Kanwal</h1>
+                    <p> I am a Math and Computer Science student at the University of Waterloo. I am passionate about software development and I am always looking for new opportunities to learn and grow. I have experience with Python, Java, and C. I am also familiar with HTML, CSS, JavaScript, React, and Node.js. I am currently looking for a co-op position for the Fall 2025 term.
+                    </p>
+                    
+                    <div class="btn-group" data-aos="fade-up" data-aos-delay="200">
+                        <a href="mailto:s3kanwal@uwaterloo.ca" class="btn">s3kanwal@uwaterloo.ca</a>
+                        <div class="social">
+                            <a href="https://linkedin.com/in/sanat-kanwal-68b87a329" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/s4natk" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---typed js for typing text effect-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        /** creating button click show hide navbar **/
+        var togglebtn = document.querySelector('.togglebtn');
+        var nav = document.querySelector('.navlinks');
+        var links = document.querySelector('.navlinks li');
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input", {
+            strings:["Frontend Developer", "Backend Developer", "Math and Computer Science Student"],
+            typeSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
 </html>
